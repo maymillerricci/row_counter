@@ -134,7 +134,7 @@
                 document.body.appendChild(iframe);
             }, false);
         </script>
-        <title>Row Counter &#8211;May May's Crochets</title>
+        <title>Row and Stitch Counter for Crochet and Knitting</title>
         <link rel='dns-prefetch' href='//s0.wp.com'/>
         <link rel='dns-prefetch' href='//stats.wp.com'/>
         <link rel='dns-prefetch' href='//wordpress.com'/>
@@ -2182,10 +2182,10 @@
         <link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fmaymayscrochets.com%2Frow-counter%2F&amp;for=wpcom-auto-discovery"/>
         <link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fmaymayscrochets.com%2Frow-counter%2F&amp;for=wpcom-auto-discovery"/>
         <!-- Jetpack Open Graph Tags -->
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Row Counter"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Row and Stitch Counter for Crochet and Knitting"/>
         <meta property="og:url" content="https://maymayscrochets.com/row-counter/"/>
-        <meta property="og:description" content=".counter-wrapper { display: flex; justify-content: center; gap: 6em; flex-wrap: wrap; margin-top: 2em; font-family: sans-serif; } .counter-box { position: relative; border: 2px solid #ccc; border-r…"/>
+        <meta property="og:description" content="Keep track of your crochet or knitting rows or stitches with this free online counter."/>
         <meta property="article:published_time" content="2025-05-21T20:19:51+00:00"/>
         <meta property="article:modified_time" content="2025-05-22T01:35:43+00:00"/>
         <meta property="og:site_name" content="May May&#039;s Crochets"/>
@@ -2195,13 +2195,13 @@
         <meta property="og:image:alt" content=""/>
         <meta property="og:locale" content="en_US"/>
         <meta property="article:publisher" content="https://www.facebook.com/WordPresscom"/>
-        <meta name="twitter:text:title" content="Row Counter"/>
+        <meta name="twitter:text:title" content="Row and Stitch Counter for Crochet and Knitting"/>
         <meta name="twitter:image" content="https://maymayscrochets.com/wp-content/uploads/2025/05/cropped-yarn_heart-removebg-preview.png?w=240"/>
         <meta name="twitter:card" content="summary"/>
         <!-- End Jetpack Open Graph Tags -->
         <link rel="search" type="application/opensearchdescription+xml" href="https://maymayscrochets.com/osd.xml" title="May May&#039;s Crochets"/>
         <link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com"/>
-        <meta name="description" content=".counter-wrapper { display: flex; justify-content: center; gap: 6em; flex-wrap: wrap; margin-top: 2em; font-family: sans-serif; } .counter-box { position: relative; border: 2px solid #ccc; border-radius: 12px; padding: 2em; background-color: #fdfdfd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05); min-width: 240px; text-align: center; } .counter-box h2 { font-size: 2em; margin: 0 0 1em; } .reset-button { position:&hellip;"/>
+        <meta name="description" content="A simple, free, interactive, and lightweight online row and stitch counter for your crochet and knitting projects. No log-in required."/>
         <style class='wp-fonts-local'>
             @font-face {
                 font-family: Gabarito;
@@ -2382,6 +2382,8 @@
             <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:5vh;padding-bottom:15vh">
                 <main class="wp-block-group alignwide is-layout-flow wp-container-core-group-is-layout-3544366f wp-block-group-is-layout-flow">
                     <div class="wp-block-group alignwide is-vertical is-content-justification-center is-layout-flex wp-container-core-group-is-layout-ce155fab wp-block-group-is-layout-flex">
+                        <h1 style="display:none;">Free Online Stitch and Row Counter for Crochet and Knitting</h1>
+                        <h2 style="display:none;">Track your crochet or knitting progress with this easy-to-use, lightweight, free, online stitch and row counter. Great for amigurumi, scarves, sweaters, plushies, and more! No log-in required.</h2>
                         <h1 class="has-text-align-center alignwide wp-block-post-title">Row Counter</h1>
                         
                     </div>
@@ -2397,8 +2399,8 @@
                                 Count: <span id="rowsCounter">0</span>
                               </div>
                               <div class="counter-controls">
-                                <button class="control-button" onclick="let c = +rowsCounter.innerText; if (c > 0) rowsCounter.innerText = c - 1;">−</button>
-                                <button class="control-button" onclick="let c = +rowsCounter.innerText; rowsCounter.innerText = c + 1;">＋</button>
+                                <button class="control-button" title="Decrease" onclick="let c = +rowsCounter.innerText; if (c > 0) rowsCounter.innerText = c - 1;">−</button>
+                                <button class="control-button" title="Increase" onclick="let c = +rowsCounter.innerText; rowsCounter.innerText = c + 1;">＋</button>
                               </div>
                             </div>
 
@@ -2410,13 +2412,11 @@
                                 Count: <span id="stitchesCounter">0</span>
                               </div>
                               <div class="counter-controls">
-                                <button class="control-button" onclick="let c = +stitchesCounter.innerText; if (c > 0) stitchesCounter.innerText = c - 1;">−</button>
-                                <button class="control-button" onclick="let c = +stitchesCounter.innerText; stitchesCounter.innerText = c + 1;">＋</button>
+                                <button class="control-button" title="Decrease" onclick="let c = +stitchesCounter.innerText; if (c > 0) stitchesCounter.innerText = c - 1;">−</button>
+                                <button class="control-button" title="Increase" onclick="let c = +stitchesCounter.innerText; stitchesCounter.innerText = c + 1;">＋</button>
                               </div>
                             </div>
                           </div>
-                        <p></p>
-                    </div>
                 </main>
             </div>
             <footer class="wp-block-template-part">
