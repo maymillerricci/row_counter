@@ -2208,5 +2208,37 @@
         </filter>
     </defs>
 </svg>
+<script>
+  // Load counters from localStorage
+  function loadCounters() {
+    const rows = localStorage.getItem('rowsCounter');
+    const stitches = localStorage.getItem('stitchesCounter');
+
+    if (rows !== null) document.getElementById('rowsCounter').innerText = rows;
+    if (stitches !== null) document.getElementById('stitchesCounter').innerText = stitches;
+  }
+
+  // Save counters to localStorage
+  function saveCounters() {
+    localStorage.setItem('rowsCounter', document.getElementById('rowsCounter').innerText);
+    localStorage.setItem('stitchesCounter', document.getElementById('stitchesCounter').innerText);
+  }
+
+  // Wait until page is fully loaded
+  window.onload = function() {
+    loadCounters();
+
+    // Rows buttons
+    const rowsBox = document.querySelector('#rowsCounter').closest('.counter-box');
+    const rowsButtons = rowsBox.querySelectorAll('.control-button, .reset-button');
+    rowsButtons.forEach(btn => btn.addEventListener('click', saveCounters));
+
+    // Stitches buttons
+    const stitchesBox = document.querySelector('#stitchesCounter').closest('.counter-box');
+    const stitchesButtons = stitchesBox.querySelectorAll('.control-button, .reset-button');
+    stitchesButtons.forEach(btn => btn.addEventListener('click', saveCounters));
+  };
+</script>
+
   </body>
 </html>
