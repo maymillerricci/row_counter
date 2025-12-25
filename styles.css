@@ -637,6 +637,16 @@ h6 {
   filter: url(#wp-duotone-2929a3-faf9fa-3);
 }
 
+a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--primary);
+  text-decoration: underline;
+}
+
+:root :where(a:where(:not(.wp-element-button)):hover) {
+  color: var(--wp--preset--color--secondary);
+  text-decoration: none;
+}
+
 .counter-wrapper {
   display: flex;
   justify-content: center;
