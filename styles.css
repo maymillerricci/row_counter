@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Modak&display=swap");
+
 .wp-block-site-logo {
   box-sizing: border-box;
   line-height: 0
@@ -712,76 +714,4 @@ a:where(:not(.wp-element-button)) {
 .control-button:hover {
   background-color: #f0f0f0;
   transform: scale(1.05);
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url('https://fonts.wp.com/s/gabarito/v4/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj248K0EwItq6bFIg.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 500;
-  font-display: fallback;
-  src: url('https://fonts.wp.com/s/gabarito/v4/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj20cK0EwItq6bFIg.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 600;
-  font-display: fallback;
-  src: url('https://fonts.wp.com/s/gabarito/v4/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj2PcW0EwItq6bFIg.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 700;
-  font-display: fallback;
-  src: url('https://fonts.wp.com/s/gabarito/v4/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj2BMW0EwItq6bFIg.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 800;
-  font-display: fallback;
-  src: url('https://fonts.wp.com/s/gabarito/v4/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj2Y8W0EwItq6bFIg.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 900;
-  font-display: fallback;
-  src: url('https://fonts.wp.com/s/gabarito/v4/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj2SsW0EwItq6bFIg.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url('https://s0.wp.com/wp-content/themes/pub/kawaii-chan/assets/fonts/gabarito/gabarito_normal_400.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Gabarito;
-  font-style: normal;
-  font-weight: 700;
-  font-display: fallback;
-  src: url('https://s0.wp.com/wp-content/themes/pub/kawaii-chan/assets/fonts/gabarito/gabarito_normal_700.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Modak;
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url('https://s0.wp.com/wp-content/themes/pub/kawaii-chan/assets/fonts/modak/modak_normal_400.woff2') format('woff2');
 }
