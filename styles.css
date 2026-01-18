@@ -418,7 +418,7 @@ body .is-layout-grid {
 
 body {
   background-color: var(--wp--preset--color--base);
-  background-image: url('https://s0.wp.com/wp-content/themes/pub/kawaii-chan/assets/images/kawaii_pattern.png');
+  background-image: url('kawaii_pattern.png');
   background-position: 50% 0;
   background-size: 1080px;
   color: var(--wp--preset--color--contrast);
