@@ -715,3 +715,17 @@ a:where(:not(.wp-element-button)) {
   background-color: #f0f0f0;
   transform: scale(1.05);
 }
+
+/* Mobile fix for social links in header */
+@media (max-width: 768px) {
+  .wp-block-social-links.is-content-justification-right {
+    justify-content: center !important;
+  }
+}
+
+/* Reduce spacing between stacked counters on mobile */
+@media (max-width: 768px) {
+  .counter-wrapper {
+    gap: 2em;
+  }
+}
