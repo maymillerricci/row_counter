@@ -709,6 +709,7 @@ a:where(:not(.wp-element-button)) {
   background-color: #fff;
   cursor: pointer;
   transition: all 0.2s;
+  touch-action: manipulation;
 }
 
 .control-button:hover {
