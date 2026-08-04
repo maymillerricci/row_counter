@@ -20,6 +20,18 @@
   max-width: 100%
 }
 
+.wp-block-site-logo img.header-site-logo {
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+header .wp-block-site-logo {
+  box-shadow: 0 0 0 3px #ff4cb4;
+}
+
 .wp-block-site-logo a, .wp-block-site-logo img {
   border-radius: inherit
 }
@@ -511,6 +523,11 @@ h6 {
 
 .has-gabarito-font-family {
   font-family: var(--wp--preset--font-family--gabarito) !important;
+}
+
+.has-modak-font-family {
+  font-family: var(--wp--preset--font-family--modak) !important;
+  font-synthesis: none;
 }
 
 :root :where(.wp-block-image) {
