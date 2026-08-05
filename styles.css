@@ -667,6 +667,24 @@ a:where(:not(.wp-element-button)) {
   text-decoration: none;
 }
 
+.stitch-haven-link {
+  color: #2929a3;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.stitch-haven-link:hover {
+  color: #2929a3;
+  text-decoration: none;
+}
+
+.entry-content a:focus-visible {
+  text-decoration: underline;
+  outline: 2px solid #2929a3;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .counter-wrapper {
   display: flex;
   justify-content: center;
