@@ -171,6 +171,7 @@ html :where(img[class*=wp-image-]) {
   --wp--preset--color--primary: #ff4cb4;
   --wp--preset--color--secondary: #ff33aa;
   --wp--preset--color--tertiary: #faf9fa;
+  --page--heading-color: #e43aa4;
   --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
   --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
   --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
@@ -444,7 +445,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--wp--preset--color--primary);
+  color: var(--page--heading-color);
   font-family: var(--wp--preset--font-family--modak);
   font-style: normal;
   line-height: 1.25;
@@ -695,10 +696,17 @@ a:where(:not(.wp-element-button)) {
   position: absolute;
   top: 10px;
   right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: none;
   background: none;
   font-size: 1.5em;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .counter-display {
