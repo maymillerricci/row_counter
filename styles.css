@@ -6,6 +6,109 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Modak&display=swap");
 
+.site-header,
+.site-footer {
+  padding-inline: var(--wp--preset--spacing--50);
+}
+
+.site-header__panel,
+.site-footer__inner {
+  width: 100%;
+  max-width: var(--wp--style--global--content-size);
+  margin-inline: auto;
+}
+
+.site-header__panel {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--wp--preset--spacing--40);
+  padding-top: var(--wp--preset--spacing--20);
+  border-radius: 50px 50px 0 0;
+  background: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--tertiary);
+}
+
+.site-brand-logo {
+  display: inline-block;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 3px var(--wp--preset--color--primary);
+  line-height: 0;
+}
+
+.site-brand-logo img {
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.site-title {
+  margin: 0;
+  padding-bottom: var(--wp--preset--spacing--40);
+  color: var(--wp--preset--color--tertiary);
+  font-family: var(--wp--preset--font-family--modak);
+  font-size: var(--wp--preset--font-size--x-large);
+  font-synthesis: none;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.site-header__decoration,
+.site-footer__decoration {
+  margin: 0;
+  line-height: 1;
+}
+
+.site-header__decoration img,
+.site-footer__decoration img {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.site-header__decoration img {
+  filter: url(#wp-duotone-purplepink);
+}
+
+.site-footer__decoration img {
+  filter: url(#wp-duotone-2929a3-faf9fa-3);
+}
+
+.site-footer__panel {
+  padding: var(--wp--preset--spacing--40) 0 1.25rem;
+  border-radius: 0 0 50px 50px;
+  background: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--base);
+}
+
+.site-footer__content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-header .wp-block-social-links,
+.site-footer .wp-block-social-links {
+  margin: 0;
+}
+
 .wp-block-site-logo {
   box-sizing: border-box;
   line-height: 0
