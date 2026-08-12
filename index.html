@@ -36,6 +36,7 @@
   <link rel="apple-touch-icon" href="yarn_heart.png">
   <meta name="msapplication-TileImage" content="yarn_heart.png">
   <link rel="stylesheet" href="styles.css?v=20260812-hygiene">
+  <script src="counter.js?v=20260812-hygiene" defer></script>
 </head>
 <body>
   <div>
@@ -103,48 +104,42 @@
           </div>
           <div class="counter-wrapper">
             <!-- Rows Counter -->
-            <div class="counter-box">
-              <button class="reset-button" type="button"
-                      aria-label="Reset row count"
-                      onclick="rowsCounter.innerText = 0;" title="Reset">🔄
+          <div class="counter-box" data-counter-key="rowsCounter">
+            <button class="reset-button" type="button" data-action="reset"
+                    aria-label="Reset row count" title="Reset">🔄
               </button>
               <h2>Rows</h2>
               <div class="counter-display">
                 Count: <span id="rowsCounter" role="status" aria-label="Row count">0</span>
               </div>
               <div class="counter-controls">
-                <button class="control-button" type="button"
-                        aria-label="Decrease row count" title="Decrease"
-                        onclick="let c = +rowsCounter.innerText; if (c > 0) rowsCounter.innerText = c - 1;">
+              <button class="control-button" type="button" data-action="decrease"
+                      aria-label="Decrease row count" title="Decrease">
                   −
                 </button>
-                <button class="control-button" type="button"
-                        aria-label="Increase row count" title="Increase"
-                        onclick="let c = +rowsCounter.innerText; rowsCounter.innerText = c + 1;">
+              <button class="control-button" type="button" data-action="increase"
+                      aria-label="Increase row count" title="Increase">
                   ＋
                 </button>
               </div>
             </div>
 
             <!-- Stitches Counter -->
-            <div class="counter-box">
-              <button class="reset-button" type="button"
-                      aria-label="Reset stitch count"
-                      onclick="stitchesCounter.innerText = 0;" title="Reset">🔄
+          <div class="counter-box" data-counter-key="stitchesCounter">
+            <button class="reset-button" type="button" data-action="reset"
+                    aria-label="Reset stitch count" title="Reset">🔄
               </button>
               <h2>Stitches</h2>
               <div class="counter-display">
                 Count: <span id="stitchesCounter" role="status" aria-label="Stitch count">0</span>
               </div>
               <div class="counter-controls">
-                <button class="control-button" type="button"
-                        aria-label="Decrease stitch count" title="Decrease"
-                        onclick="let c = +stitchesCounter.innerText; if (c > 0) stitchesCounter.innerText = c - 1;">
+              <button class="control-button" type="button" data-action="decrease"
+                      aria-label="Decrease stitch count" title="Decrease">
                   −
                 </button>
-                <button class="control-button" type="button"
-                        aria-label="Increase stitch count" title="Increase"
-                        onclick="let c = +stitchesCounter.innerText; stitchesCounter.innerText = c + 1;">
+              <button class="control-button" type="button" data-action="increase"
+                      aria-label="Increase stitch count" title="Increase">
                   ＋
                 </button>
               </div>
@@ -250,36 +245,5 @@
       </filter>
     </defs>
   </svg>
-  <script>
-    // Load counters from localStorage
-    function loadCounters() {
-      const rows = localStorage.getItem('rowsCounter');
-      const stitches = localStorage.getItem('stitchesCounter');
-
-      if (rows !== null) document.getElementById('rowsCounter').innerText = rows;
-      if (stitches !== null) document.getElementById('stitchesCounter').innerText = stitches;
-    }
-
-    // Save counters to localStorage
-    function saveCounters() {
-      localStorage.setItem('rowsCounter', document.getElementById('rowsCounter').innerText);
-      localStorage.setItem('stitchesCounter', document.getElementById('stitchesCounter').innerText);
-    }
-
-    // Wait until page is fully loaded
-    window.onload = function () {
-      loadCounters();
-
-      // Rows buttons
-      const rowsBox = document.querySelector('#rowsCounter').closest('.counter-box');
-      const rowsButtons = rowsBox.querySelectorAll('.control-button, .reset-button');
-      rowsButtons.forEach(btn => btn.addEventListener('click', saveCounters));
-
-      // Stitches buttons
-      const stitchesBox = document.querySelector('#stitchesCounter').closest('.counter-box');
-      const stitchesButtons = stitchesBox.querySelectorAll('.control-button, .reset-button');
-      stitchesButtons.forEach(btn => btn.addEventListener('click', saveCounters));
-    };
-  </script>
 </body>
 </html>
