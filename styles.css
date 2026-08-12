@@ -1,3 +1,9 @@
+/*
+ * Portions adapted from the Kawaii-Chan WordPress theme.
+ * Copyright (C) 2022 Automattic. Licensed under GPLv2 or later.
+ * See LICENSE and README.md for details.
+ */
+
 @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Modak&display=swap");
 
 .wp-block-site-logo {
