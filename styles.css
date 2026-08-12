@@ -621,7 +621,7 @@ h6 {
 }
 
 .wp-container-core-group-is-layout-695b186b {
-  gap: 5vh;
+  gap: 0.5rem;
   flex-direction: column;
   align-items: center;
 }
@@ -772,4 +772,113 @@ a:where(:not(.wp-element-button)) {
   .counter-wrapper {
     gap: 2em;
   }
+}
+
+.privacy-shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+
+.privacy-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--wp--preset--color--contrast);
+  font-family: var(--wp--preset--font-family--modak);
+  font-size: var(--wp--preset--font-size--large);
+  text-decoration: none;
+}
+
+.privacy-brand img {
+  width: 64px;
+  height: 64px;
+  border: 3px solid var(--wp--preset--color--primary);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.privacy-card {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid #f0d6eb;
+  border-radius: 24px;
+  background: #faf9fa;
+  box-shadow: 0 8px 24px rgba(41, 41, 163, 0.12);
+  color: #4a4a4a;
+}
+
+.privacy-card h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  text-align: center;
+}
+
+.privacy-card h2 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: var(--wp--preset--font-size--large);
+}
+
+.privacy-card p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+.privacy-updated,
+.privacy-back {
+  text-align: center;
+}
+
+.privacy-updated {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.privacy-contact {
+  margin-top: 1.5rem !important;
+}
+
+.privacy-back {
+  margin-top: 1.5rem;
+}
+
+.footer-credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin: 0;
+  color: #c9c9c9;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.footer-credit img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.footer-credit a {
+  color: var(--wp--preset--color--tertiary);
+  font-weight: 600;
+}
+
+.page-legal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1rem 1.25rem;
+  color: #625d63;
+  font-size: 0.825rem;
+  text-align: center;
+}
+
+.page-legal a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.page-legal a:hover {
+  color: #4a4a4a;
 }
