@@ -6,9 +6,7 @@ A simple browser-based row and stitch counter for crochet and knitting. Counts a
 
 ## Development
 
-This is a static site with no build step. Serve the repository root with any local HTTP server to preview changes.
-
-When `styles.css` or `counter.js` changes, update its version query in the HTML files that load it so returning visitors do not receive a stale asset after deployment.
+This is a static site with no build step. After changing `styles.css` or `counter.js`, update its version query in each HTML file that loads it to prevent stale cached files after deployment.
 
 ## Credits and license
 
