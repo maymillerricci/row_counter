@@ -167,6 +167,11 @@ a:hover {
   line-height: 1.5;
 }
 
+.site-footer .social-links--labeled {
+  justify-content: center;
+  font-size: 28px;
+}
+
 .social-link {
   display: block;
   margin: 0;
@@ -471,6 +476,18 @@ a:hover {
   height: 3rem;
 }
 
+.footer-credit__made {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-credit__made,
+.footer-credit__by,
+.footer-credit a {
+  white-space: nowrap;
+}
+
 .footer-credit a {
   color: var(--color-surface);
   font-weight: 600;
@@ -577,5 +594,24 @@ a:hover {
 
   .counter-wrapper {
     gap: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-credit {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .footer-credit img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .site-footer .social-links--labeled {
+    gap: 0.75rem;
+    font-size: 24px;
   }
 }
