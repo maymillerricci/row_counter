@@ -102,7 +102,7 @@ a:hover {
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-medium);
+  gap: var(--space-small);
   padding-top: var(--space-small);
   border-radius: 50px 50px 0 0;
   background-color: var(--color-contrast);
@@ -118,15 +118,15 @@ a:hover {
 
 .site-brand-logo img {
   box-sizing: border-box;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: inherit;
   object-fit: cover;
 }
 
 .site-title {
   margin: 0;
-  padding-bottom: var(--space-medium);
+  padding-bottom: var(--space-small);
   color: var(--color-surface);
   font-family: var(--font-heading);
   font-size: var(--font-size-x-large);
@@ -241,7 +241,7 @@ a:hover {
 
 /* Main counter */
 .page-content {
-  padding: 5vh var(--space-large) 15vh;
+  padding: 3vh var(--space-large) 15vh;
 }
 
 .counter-page {
@@ -267,7 +267,8 @@ a:hover {
 }
 
 .stitch-haven-banner {
-  max-width: var(--content-width);
+  box-sizing: border-box;
+  max-width: 768px;
   margin: 0 auto 2rem;
   padding: 1rem 1.5rem;
   border-radius: 12px;
@@ -281,6 +282,16 @@ a:hover {
   font-family: var(--font-support);
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.stitch-haven-banner__buddy {
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: 0.3em;
+  border-radius: 50%;
+  background: #fbe3c4;
+  vertical-align: -0.5em;
 }
 
 .stitch-haven-link {
@@ -304,8 +315,9 @@ a:hover {
 .counter-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 6em;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
   max-width: var(--content-width);
   margin: 2em auto 0;
   font-family: sans-serif;
@@ -320,6 +332,96 @@ a:hover {
   background-color: #fdfdfd;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
+}
+
+/* Crafting buddy: Andie perches on a counter card and can tuck down to peek */
+.counter-box:has(.crafting-buddy--narrow) {
+  margin-top: 3.5rem;
+}
+
+.crafting-buddy {
+  position: absolute;
+  bottom: calc(100% - 2px);
+  right: 1.5rem;
+  height: 6.5rem;
+}
+
+.crafting-buddy--wide {
+  display: none;
+}
+
+.crafting-buddy--hiding {
+  overflow: hidden;
+}
+
+.crafting-buddy__toggle {
+  display: block;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.crafting-buddy__toggle img {
+  display: block;
+  width: auto;
+  height: 100%;
+  transform: translateY(13%);
+  transition: transform 0.35s ease;
+  pointer-events: none;
+}
+
+.crafting-buddy--hiding .crafting-buddy__toggle img {
+  transform: translateY(58%);
+}
+
+.crafting-buddy__toggle:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.crafting-buddy__toggle:hover img,
+.crafting-buddy__toggle:active img {
+  transform: translateY(calc(13% - 4px));
+}
+
+.crafting-buddy--hiding .crafting-buddy__toggle:hover img,
+.crafting-buddy--hiding .crafting-buddy__toggle:active img {
+  transform: translateY(calc(58% - 8px));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crafting-buddy__toggle img {
+    transition: none;
+  }
+}
+
+/* Side by side from 720px, with Andie on Stitches; stacked below, with Andie on Rows */
+@media (min-width: 720px) {
+  .counter-wrapper {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    column-gap: clamp(1.5rem, calc(100vw - 720px), 6em);
+  }
+
+  .counter-box:has(.crafting-buddy--narrow) {
+    margin-top: 0;
+  }
+
+  .counter-box:has(.crafting-buddy--wide) {
+    margin-top: 3.5rem;
+  }
+
+  .crafting-buddy--narrow {
+    display: none;
+  }
+
+  .crafting-buddy--wide {
+    display: block;
+  }
 }
 
 .counter-box h2 {
@@ -591,10 +693,6 @@ a:hover {
   .social-links--labeled {
     justify-content: center;
   }
-
-  .counter-wrapper {
-    gap: 2em;
-  }
 }
 
 @media (max-width: 480px) {
@@ -612,6 +710,29 @@ a:hover {
 
   .site-footer .social-links--labeled {
     gap: 0.75rem;
+    font-size: 24px;
+  }
+}
+
+/* Header links: one row down to small tablets, two by two on phones */
+@media (max-width: 720px) {
+  .stitch-haven-banner p {
+    text-wrap: balance;
+  }
+
+  .site-header .social-links--labeled {
+    flex-wrap: nowrap;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header .social-links--labeled {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: 1.25rem;
+    row-gap: 0.25rem;
     font-size: 24px;
   }
 }

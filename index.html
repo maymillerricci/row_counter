@@ -35,8 +35,9 @@
   <link rel="icon" href="yarn_heart.png" sizes="192x192">
   <link rel="apple-touch-icon" href="yarn_heart.png">
   <meta name="msapplication-TileImage" content="yarn_heart.png">
-  <link rel="stylesheet" href="styles.css?v=20260907-links">
+  <link rel="stylesheet" href="styles.css?v=20261111-andie">
   <script src="counter.js?v=20260812-hygiene" defer></script>
+  <script src="buddy.js?v=20261111-andie" defer></script>
 </head>
 <body>
   <div>
@@ -120,10 +121,11 @@
           <!-- Stitch Haven Banner -->
           <div class="stitch-haven-banner">
             <p>
-              ✨ Tired of switching between your pattern and your counter?
+              <img class="stitch-haven-banner__buddy" src="andie_avatar.svg" alt="" width="220" height="220">
+              Follow your pattern step by step right beside your counters in
               <a href="https://stitchhaven.maymayscrochets.com?utm_source=counter"
                  target="_blank" rel="noopener" class="stitch-haven-link">
-                Stitch Haven</a> lets you follow your pattern step by step, right alongside your counters.
+                Stitch Haven</a>, this counter site's big sister.
               <a href="https://stitchhaven.maymayscrochets.com?utm_source=counter"
                  target="_blank" rel="noopener" class="stitch-haven-link">
                 Check it out →
@@ -133,6 +135,12 @@
           <div class="counter-wrapper">
             <!-- Rows Counter -->
           <div class="counter-box" data-counter-key="rowsCounter">
+            <div class="crafting-buddy crafting-buddy--narrow">
+              <button class="crafting-buddy__toggle" type="button"
+                      aria-label="Tuck Andie away" title="Tuck Andie away">
+                <img src="andie.svg" alt="" width="345" height="370">
+              </button>
+            </div>
             <button class="reset-button" type="button" data-action="reset"
                     aria-label="Reset row count" title="Reset">🔄
               </button>
@@ -154,6 +162,12 @@
 
             <!-- Stitches Counter -->
           <div class="counter-box" data-counter-key="stitchesCounter">
+            <div class="crafting-buddy crafting-buddy--wide">
+              <button class="crafting-buddy__toggle" type="button"
+                      aria-label="Tuck Andie away" title="Tuck Andie away">
+                <img src="andie.svg" alt="" width="345" height="370">
+              </button>
+            </div>
             <button class="reset-button" type="button" data-action="reset"
                     aria-label="Reset stitch count" title="Reset">🔄
               </button>
