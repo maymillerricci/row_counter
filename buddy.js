@@ -6,6 +6,11 @@ const showBuddy = (hidden) => {
     const toggle = buddy.querySelector(".crafting-buddy__toggle");
     const label = hidden ? "Bring Andie back" : "Tuck Andie away";
 
+    if (!hidden && buddy.classList.contains("crafting-buddy--hiding")) {
+      buddy.classList.add("crafting-buddy--returning");
+      setTimeout(() => buddy.classList.remove("crafting-buddy--returning"), 350);
+    }
+
     buddy.classList.toggle("crafting-buddy--hiding", hidden);
     toggle.setAttribute("aria-label", label);
     toggle.title = label;

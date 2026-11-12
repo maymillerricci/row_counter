@@ -286,12 +286,12 @@ a:hover {
 
 .stitch-haven-banner__buddy {
   display: inline-block;
-  width: 1.75em;
-  height: 1.75em;
+  width: 2em;
+  height: 2em;
   margin-right: 0.3em;
   border-radius: 50%;
   background: #fbe3c4;
-  vertical-align: -0.5em;
+  vertical-align: -0.6em;
 }
 
 .stitch-haven-link {
@@ -350,7 +350,8 @@ a:hover {
   display: none;
 }
 
-.crafting-buddy--hiding {
+.crafting-buddy--hiding,
+.crafting-buddy--returning {
   overflow: hidden;
 }
 
