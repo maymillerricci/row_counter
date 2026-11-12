@@ -715,7 +715,7 @@ a:hover {
   }
 }
 
-/* Header links: one row down to small tablets, two by two on phones */
+/* Header and footer links: one row down to small tablets, two by two on phones */
 @media (max-width: 720px) {
   .stitch-haven-banner p {
     text-wrap: balance;
@@ -728,7 +728,8 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  .site-header .social-links--labeled {
+  .site-header .social-links--labeled,
+  .site-footer .social-links--labeled {
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: center;
